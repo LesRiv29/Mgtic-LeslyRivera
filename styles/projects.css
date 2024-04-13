@@ -1,0 +1,5 @@
+.project-conteiner{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
+}

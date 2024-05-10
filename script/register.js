@@ -94,8 +94,9 @@ function registrar() {
     if (isValid(nuevoAlumno)) {
 
         students.push(nuevoAlumno);
+        displayCards();
 
-        console.log(students);
+        //console.log(students);
 
     } else {
 
@@ -107,15 +108,12 @@ function registrar() {
 
 
 
-// function init() {
+ function init() {
+    let student1 = new Student("Samuel", 99);
+     students.push(student1);
+     displayCards();
 
-//     let student1 = new Student("Samuel", 99);
+ }
 
-//     students.push(student1);
-
-// }
-
-
-
-// window.onload = init;// espera a rendirizar el HTML
+window.onload = init;// espera a rendirizar el HTML
 

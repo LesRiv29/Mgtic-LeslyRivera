@@ -1,48 +1,107 @@
-*{
+* {
     padding: 0;
-    margin: 0
-    ;
+    margin: 0;
 }
 
-body{
+body {
     font-family: arial;
-    background-color: Black;
-    color: green;
+    background-color: #a3dce8;
+    color: rgb(21, 11, 163);
 }
-p{
-    color: blueviolet;
+
+p {
+    color: rgb(190, 72, 56);
     line-height: 1.5;
 }
-h1,h2{
+
+h1,
+h2 {
     text-align: center;
     font-size: 50px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
-a{
+
+a {
     text-decoration: none;
-    color: gray;
+    color: rgb(223, 140, 17);
 }
-img{
+
+img {
     max-width: 100%;
 }
+
 /*utilerias*/
-.conteiner{
+.conteiner {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
-.btn{
+
+.btn {
     display: block;
-    border: 1px solid black;
+    border: 1px solid #a3dce8;
     margin: 10px auto;
     padding: 20px;
     width: 150px;
     text-align: center;
     border-radius: 20px;
     background-color: #dab10d;
-    color:black;
+    color: #a3dce8;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    * {
+        position: relative
+    }
+
+    td,
+    th {
+        padding-left: 8px
+    }
+
+    thead tr {
+        height: 60px;
+        background: #FFED86;
+        font-size: 16px;
+    }
+
+    tbody tr {
+        height: 48px;
+        border-bottom: 1px solid #E3F1D5;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    td,
+    th {
+        text-align: left;
+
+        &.l {
+            text-align: right
+        }
+
+        &.c {
+            text-align: center
+        }
+
+        &.r {
+            text-align: center
+        }
+    }
 }

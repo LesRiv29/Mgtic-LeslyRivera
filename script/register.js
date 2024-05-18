@@ -4,7 +4,7 @@ let students = [];
 
 //constructor
 
-function Student(name, age, mail,password,signature1, signature2, signature3, campus) {
+function Student(name, age, mail, password, signature1, signature2, signature3, campus) {
 
     this.name = name;
     this.age = age;
@@ -89,12 +89,13 @@ function registrar() {
     let inputMateria3 = document.getElementById("txtMateria3").value;
     let inputFacultad = document.getElementById("txtFacultad").value;
 
-    let nuevoAlumno = new Student(inputNombre, inputEdad,inputCorreo, inputPassword, inputMateria1,inputMateria2, inputMateria3, inputFacultad);
+    let nuevoAlumno = new Student(inputNombre, inputEdad, inputCorreo, inputPassword, inputMateria1, inputMateria2, inputMateria3, inputFacultad);
 
     if (isValid(nuevoAlumno)) {
 
-        students.push(nuevoAlumno);
-        displayCards();
+        //students.push(nuevoAlumno);
+        insertToDataBase(nuevoAlumno);
+        // displayCards();
 
         //console.log(students);
 
@@ -105,15 +106,34 @@ function registrar() {
     }
 
 }
+function insertToDataBase() {
+    $.ajax({
+        url: ".app/register.php",
+        method: "POST",
+        data: {
+
+        },
+        dataType: "json",
+        success: function (response) {
+            console.log(response);
+            setTimeout(function () { location.reload(); }, 1000);
+        },
+        error: function (xhr, status, error) {
+            console.log("Error de conexion");
+            console.error(error);
+
+        }
+    })
+}
 
 
 
- function init() {
+function init() {
     let student1 = new Student("Samuel", 99);
-     students.push(student1);
-     displayCards();
+    students.push(student1);
+    displayCards();
 
- }
+}
 
 window.onload = init;// espera a rendirizar el HTML
 

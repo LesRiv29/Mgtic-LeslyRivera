@@ -2,11 +2,11 @@
 
 $serverName="localhost";
 
-$userName="root";
+$userName="lesly";
 
-$password=""; // "" "root"  "1234"
+$password="root@19"; // "" "root"  "1234"
 
-$dbName="sistema_escolar";
+$dbName="registro_escolar";
 
  
 

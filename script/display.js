@@ -40,7 +40,7 @@ function searchToDataBase() {
       console.log(response);
       if (response.success) {
         console.log(response.data);
-
+        response.data.forEach(displayCards);
       } else {
         console.log("Error en la respuesta del servidor");
       }
@@ -52,7 +52,10 @@ function searchToDataBase() {
 
   })
 }
-//  function int 
+function int (){
+  searchToDataBase();
+} 
+window.onload=int;
 
 
 

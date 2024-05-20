@@ -20,26 +20,27 @@ if($_SERVER["REQUEST_METHOD"]== "GET"){
     if($conn->connect_error){
         die("Error de conexion de la base de datods" . $conn->connect_error);
     }
-    $query = "SELECT id,name,age FROM estudiantes";  
+    $query = "SELECT id,nombre,edad FROM estudiantes";  
    $stmt=$conn->prepare($query);
-    $stmt->execuete();
-    $result=$stmt-get_result();
+    $stmt->execute();
+    $result=$stmt->get_result();
 
-    if($result->num_row >0){
+    if($result->num_rows >0){
         $data = array();
         while($row = $result->fetch_assoc()){
           $data[] = array(
             "id"=>$row["id"],
-            "name" =>$row["name"],
-            "age" =>$row["age"]
+            "name" =>$row["nombre"],
+            "age" =>$row["edad"]
           );
         }
        echo json_encode(array("success"=>true, "data"=>$data ));
-       
-
-    );
-
-    }
+  }else{
+    echo json_encode(array("success"=>false,"error"=>"no se encontraron lo datos"));
+  }
+  $stmt->close();
+    
 }else{
-
+       echo json_encode(array( "success"=> false,"error"=>"No se encontraron los datos" ));
+       
 }

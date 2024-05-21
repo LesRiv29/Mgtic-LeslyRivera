@@ -3,20 +3,40 @@ function displayCards(student) {
   //let row = "";
   // for (let i = 0; i < students.length; i++) {
   //   let student = students[i];
+  // let card = `
+  //   <div class='student'>
+  //       <h4> Nombre: ${student.name}</h4>
+  //       <p>Edad:${student.age}</p>
+  //       <p>Correo:${student.mail}</p>
+  //       <p>Pass:${student.password}</p>
+  //       <p>Materia1:${student.signature1}</p>
+  //       <p>Materia2:${student.signature2}</p>
+  //       <p>Materia3:${student.signature3}</p>
+  //       <p>Facultad:${student.campus}</p>
+  //       <button>Eliminar</button>
+  //
+  //   </div>
+  //   `;
   let card = `
-    <div class='student'>
-        <h4> Nombre: ${student.name}</h4>
-        <p>Edad:${student.age}</p>
-        <p>Correo:${student.mail}</p>
-        <p>Pass:${student.password}</p>
-        <p>Materia1:${student.signature1}</p>
-        <p>Materia2:${student.signature2}</p>
-        <p>Materia3:${student.signature3}</p>
-        <p>Facultad:${student.campus}</p>
-        <button>Eliminar</button>
-
+  <div class="col-sm-3">
+    <div class="card" style="max-width: 18rem;">
+      <div class="card-header text-white bg-primary mb-3">
+          <h3 class="card-title">${student.name}</h3>
+      </div>
+      <div class="card-body">
+          <div class="card-text">
+          <p><b>Edad</b>: ${student.age}</p>
+          <p><b>Correo: </b>${student.mail}</p>
+          <p><b>Pass: </b>${student.password}</p>
+          <p><b>Materia1: </b>${student.signature1}</p>
+          <p><b>Materia2: </b>${student.signature2}</p>
+          <p><b>Materia3: </b>${student.signature3}</p>
+          <p><b>Facultad: </b>${student.campus}</p>
+      </div>
+      </div>
     </div>
-    `;
+  </div>
+  `;
     // row += `<tr><td> ${student.name}</td>
     //     <td>${student.age}</td>
     //     <td>${student.mail}</td>

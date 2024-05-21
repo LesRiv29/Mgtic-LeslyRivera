@@ -57,5 +57,5 @@ function calcularTaxes(ingreso, egresos) {
     <p class= "conteiner"> Tus taxes son: $${total}<p> 
     `);
 }
-calcularTaxes(sumar(100, 200), sumar(10, 8));
-calcularTaxes(sumar(200, 300), sumar(50, 30));
+// calcularTaxes(sumar(100, 200), sumar(10, 8));
+// calcularTaxes(sumar(200, 300), sumar(50, 30));

@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UFT-8">
-        <meta name="viewport" cpntent="with=divice-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/base.css">
-        <link rel="stylesheet" href="./styles/index.css">
-        <link rel="stylesheet" href="./styles/display.css">
-        <title>Document</title>
-    </head>
-    <body>
-        <header>
-             <div class="barra-menu">
-                <h1>Sistema de Registro</h1>
-
-                 <nav class="menu">
-                    <a href="index.html">Home</a>
-                    <a href="projects.html">projects</a>
-                    <a href="articles.html">Articles</a>
-                    <a href="contactp.html">Contacto</a>
-                    <a href="facultades.html">Facultades</a>
-                     <a href="usuarios.html">Usuarios</a>
-                 </nav>
-             </div>
-        </header>
-
-            <main>
-                <div>
-                    <label>Facultad</label>
-                    <input type="text" id="txtFacultad">
-
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" cpntent="with=divice-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/adminlte.css">
+    <title>Document</title>
+</head>
+<body>
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="projects.html" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="facultades.html" class="nav-link">Facultades</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="usuarios.html" class="nav-link">Usuarios</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="registro.html" class="nav-link">Registro</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section class="gradient-custom">
+        <div class="container py-3 h-100">
+            <section class="content">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="card card-cyan w-100">
+                        <div class="card-header">
+                            <h3 class="card-title">Registrar Facultad</h3>
+                        </div>
+                    </div>
+                    <div class="card card-cyan w-100">
+                        <form id="form-facultad" onsubmit="event.preventDefault(); register();">
+                            <div class="form-group">
+                                <label for="control">Facultad</label>
+                                <input type="text" class="form-control" id="txtFacultad" name="txtFacultad">
+                            </div>
+                            <div class="form-group">
+                                <label for="control">Campus</label>
+                                <input type="text" class="form-control" id="txtCampus" name="txtCampus">
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>
+                                    Registrar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div>
-                      <label>Campus</label>
-                      <input type="text" id="txtCampus">
-                </div>
-                <div>
-                    <button onclick="register()">Registrar</button>
-                </div>
-            </main>
-            <script src="script/facultades.js"></script>
-            <script src="script/storeManager.js"></script>
-        
-    </body>
+            </section>
+        </div>
+    </section>
+</main>
+<script src="./script/storeManager.js"></script>
+<script src="./script/facultades.js"></script>
+</body>
 </html>

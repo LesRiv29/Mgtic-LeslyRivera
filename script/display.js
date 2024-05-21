@@ -1,9 +1,9 @@
-function displayCards(students) {
-  let card = "";
+function displayCards(student) {
+  //let card = "";
   //let row = "";
-  for (let i = 0; i < students.length; i++) {
-    let student = students[i];
-    card += `
+  // for (let i = 0; i < students.length; i++) {
+  //   let student = students[i];
+  let card = `
     <div class='student'>
         <h4> Nombre: ${student.name}</h4>
         <p>Edad:${student.age}</p>
@@ -27,9 +27,10 @@ function displayCards(students) {
     //     <td>${student.campus}</td>
     //   </tr>`;
 
-  }
-  document.getElementById("studentList").innerHTML = card;
-  //document.getElementById("bodyTable").innerHTML = row;
+  // }
+
+document.getElementById("studentList").innerHTML += card;
+//document.getElementById("bodyTable").innerHTML = row;
 }
 function searchToDataBase() {
   $.ajax({
@@ -39,21 +40,10 @@ function searchToDataBase() {
     success: function (response) {
       console.log(response);
       if (response.success) {
-        $.each(response, function(index, element) {
-          displayCards(element);
-        });
+        response.data.forEach(displayCards);
       }else{
         console.log("Error en la respuesta del servidor");
       }
-
-
-      // if (response.success) {
-      //   console.log(response.data);
-      //   response.data.forEach(displayCards);
-      // } else {
-      //   console.log("Error en la respuesta del servidor");
-      // }
-
     },
     error: function (xhr, status, error) {
       console.log(error);

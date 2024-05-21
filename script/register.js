@@ -1,7 +1,6 @@
 let students = [];
 
 
-
 //constructor
 
 function Student(name, age, mail, password, signature1, signature2, signature3, campus) {
@@ -17,13 +16,11 @@ function Student(name, age, mail, password, signature1, signature2, signature3, 
 }
 
 
-
 //validación
 
 function isValid(unAlumno) {
 
     let validacion = true;
-
 
 
     if (unAlumno.name == "") {
@@ -69,8 +66,6 @@ function isValid(unAlumno) {
     }
 
 
-
-
     return validacion;
 
 }
@@ -80,7 +75,6 @@ function isValid(unAlumno) {
 function registrar() {
 
     let inputNombre = document.getElementById("txtNombre").value;
-
     let inputEdad = document.getElementById("txtEdad").value;
     let inputCorreo = document.getElementById("txtCorreo").value;
     let inputPassword = document.getElementById("txtPassword").value;
@@ -106,17 +100,27 @@ function registrar() {
     }
 
 }
+
 function insertToDataBase() {
     $.ajax({
-        url: ".app/register.php",
+        url: "app/register.php",
         method: "POST",
         data: {
-
+            'nombre': document.getElementById("txtNombre").value,
+            'edad': document.getElementById("txtEdad").value,
+            'correo': document.getElementById("txtCorreo").value,
+            'password': document.getElementById("txtPassword").value,
+            'materia1': document.getElementById("txtMateria1").value,
+            'materia2': document.getElementById("txtMateria2").value,
+            'materia3': document.getElementById("txtMateria3").value,
+            'facultad': document.getElementById("txtFacultad").value
         },
         dataType: "json",
         success: function (response) {
             console.log(response);
-            setTimeout(function () { location.reload(); }, 1000);
+            setTimeout(function () {
+                location.reload();
+            }, 1000);
         },
         error: function (xhr, status, error) {
             console.log("Error de conexion");
@@ -125,7 +129,6 @@ function insertToDataBase() {
         }
     })
 }
-
 
 
 function init() {

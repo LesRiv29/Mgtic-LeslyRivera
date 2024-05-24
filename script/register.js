@@ -89,7 +89,7 @@ function registrar() {
 
         //students.push(nuevoAlumno);
         insertToDataBase(nuevoAlumno);
-        // displayCards();
+        // displayCards(nuevoAlumno);
 
         //console.log(students);
 

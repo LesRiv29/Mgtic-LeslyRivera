@@ -31,49 +31,50 @@
         </li>
     </ul>
 </nav>
-    <main>
-        <section class="gradient-custom">
-            <div class="container py-3 h-100">
-                <section class="content">
-                    <div class="row d-flex justify-content-center align-items-center h-100">
-
+<main>
+    <section class="gradient-custom">
+        <div class="container py-3 h-100">
+            <section class="content">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="card card-cyan w-75">
                         <div class="card card-cyan w-100">
-                            <div class="card card-cyan w-100">
-                                <div class="card-header">
-                                    <h3 class="card-title">Registrar a un alumno</h3>
-                                </div>
+                            <div class="card-header">
+                                <h3 class="card-title">Registrar a un alumno</h3>
                             </div>
-                            <form id="form-alumno" onsubmit="event.preventDefault(); registrar();">
+                        </div>
+
+                        <form id="form-alumno" onsubmit="event.preventDefault(); registrar();">
+                            <div class="card-body">
                                 <div class="form-group">
-                                    <label for="control">Nombre</label>
+                                    <label for="txtNombre">Nombre</label>
                                     <input type="text" class="form-control" id="txtNombre" name="txtNombre">
                                 </div>
                                 <div class="form-group">
-                                    <label for="control">Edad</label>
+                                    <label for="txtEdad">Edad</label>
                                     <input type="text" class="form-control" id="txtEdad" name="txtEdad">
                                 </div>
                                 <div class="form-group">
-                                    <label for="control">Correo</label>
+                                    <label for="txtCorreo">Correo</label>
                                     <input type="text" class="form-control" id="txtCorreo" name="txtCorreo">
                                 </div>
                                 <div class="form-group">
-                                    <label for="control">Password</label>
+                                    <label for="txtPassword">Password</label>
                                     <input type="password" class="form-control" id="txtPassword" name="txtPassword">
                                 </div>
                                 <div class="form-group">
-                                    <label for="control">Materia 1</label>
+                                    <label for="txtMateria1">Materia 1</label>
                                     <input type="text" class="form-control" id="txtMateria1" name="txtMateria1">
                                 </div>
                                 <div class="form-group">
-                                    <label for="control">Materia 2</label>
+                                    <label for="txtMateria2">Materia 2</label>
                                     <input type="text" class="form-control" id="txtMateria2" name="txtMateria2">
                                 </div>
                                 <div class="form-group">
-                                    <label for="control">Materia 3</label>
+                                    <label for="txtMateria3">Materia 3</label>
                                     <input type="text" class="form-control" id="txtMateria3" name="txtMateria3">
                                 </div>
                                 <div class="form-group">
-                                    <label for="control">Facultad</label>
+                                    <label for="txtFacultad">Facultad</label>
                                     <select class="form-control" name="Facultad" id="txtFacultad">
                                         <option value="Administrativas">Administrativas</option>
                                         <option value="Idiomas">Idiomas</option>
@@ -81,22 +82,24 @@
                                         <option value="Derecho">Derecho</option>
                                     </select>
                                 </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>
-                                        Registrar
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>
+                                    Registrar
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                </section>
-                <section class="content">
-                    <div class="row" id="studentList">
-                    </div>
-                </section>
-            </div>
-        </section>
-    </main>
+                </div>
+
+            </section>
+            <section class="content">
+                <div class="row" id="studentList">
+                </div>
+            </section>
+        </div>
+    </section>
+</main>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

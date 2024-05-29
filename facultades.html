@@ -36,21 +36,23 @@
         <div class="container py-3 h-100">
             <section class="content">
                 <div class="row d-flex justify-content-center align-items-center h-100">
-
-                    <div class="card card-cyan w-100">
+                    <div class="card card-cyan w-50">
                         <div class="card card-cyan w-100">
                             <div class="card-header">
                                 <h3 class="card-title">Registrar Facultad</h3>
                             </div>
                         </div>
+
                         <form id="form-facultad" onsubmit="event.preventDefault(); register();">
-                            <div class="form-group">
-                                <label for="control">Facultad</label>
-                                <input type="text" class="form-control" id="txtFacultad" name="txtFacultad">
-                            </div>
-                            <div class="form-group">
-                                <label for="control">Campus</label>
-                                <input type="text" class="form-control" id="txtCampus" name="txtCampus">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="control">Facultad</label>
+                                    <input type="text" class="form-control" id="txtFacultad" name="txtFacultad">
+                                </div>
+                                <div class="form-group">
+                                    <label for="control">Campus</label>
+                                    <input type="text" class="form-control" id="txtCampus" name="txtCampus">
+                                </div>
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>
